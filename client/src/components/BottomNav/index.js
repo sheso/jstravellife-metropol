@@ -16,7 +16,6 @@ const useStyles = makeStyles({
     backgroundColor: "#b99f5e",
     display: "flex",
     justifyContent: "space-around",
-    
   },
 });
 
@@ -34,7 +33,15 @@ export default function BottomNav() {
       className={classes.root}
       style={{ maxWidth: "100vw" }}
     >
-      <Link href="/">
+      <Link
+        href="/"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyItems: "center",
+          width: "100%",
+        }}
+      >
         <BottomNavigationAction
           style={{
             color: "black",
@@ -44,14 +51,30 @@ export default function BottomNav() {
           icon={<HomeIcon />}
         />
       </Link>
-      <Link href="/services">
+      <Link
+        href="/services"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyItems: "center",
+          width: "100%",
+        }}
+      >
         <BottomNavigationAction
           style={{ color: "black", borderRight: "0.5px #00000038 solid" }}
           label="Services"
           icon={<SpaIcon />}
         />
       </Link>
-      <Link href="/chat">
+      <Link
+        href="/chat"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyItems: "center",
+          width: "100%",
+        }}
+      >
         <BottomNavigationAction
           style={{ color: "black", borderRight: "0.5px #00000038 solid" }}
           label="Chat"
@@ -61,7 +84,12 @@ export default function BottomNav() {
       <Link
         href="/profile"
         label="Profile"
-        style={{ textDecoration: "none", color: "black" }}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyItems: "center",
+          width: "100%",
+        }}
       >
         <BottomNavigationAction
           style={{ color: "black" }}
