@@ -6,7 +6,7 @@ import style from "./style.module.css";
 
 
 const Services = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // const avia = useSelector(state => state.avia);
   return (<div className={style.services_div_wrapper}>
 
