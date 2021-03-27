@@ -40,7 +40,7 @@ const Chat = () => {
       <div className={styles.chat__view}>
         {chat.messages &&
           chat.messages.map((el) => {
-            return <div className="chat__view__mes">{el.message}</div>;
+            return <div className={styles.chat__view__mes}>{el.message}</div>;
           })}
       </div>
       <form

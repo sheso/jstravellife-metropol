@@ -38,3 +38,10 @@
 .chat__view {
   margin: 50px 0 0 0;
 }
+
+.chat__view__mes {
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  height: 70px;
+}
