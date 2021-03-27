@@ -1,29 +1,38 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-import Main from './components/Main';
-import Services from './components/Services/Services';
-import SignUp from './components/SignUp';
-import SignIn from './components/SignIn';
-import Header from './components/Header';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+import Main from "./components/Main";
+import Services from "./components/Services/Services";
+import SignUp from "./components/SignUp";
+import SignIn from "./components/SignIn";
+import Chat from "./components/Chat";
+// import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
       <>
         <Router>
-          <Header />
+          {/* <Header /> */}
           <Switch>
-            <Route path="/SignIn">
+            <Route path="/signin">
               <SignIn />
             </Route>
-            <Route path="/SignUp">
+            <Route path="/signup">
               <SignUp />
-            </Route>          
-            <Route path='/services'>
+            </Route>
+            <Route path="/services">
               <Services />
             </Route>
-            <Route path="/">
-              <Redirect to="/" />
+            <Route exact path="/">
+              <Main />
+            </Route>
+            <Route path="/chat">
+              <Chat />
             </Route>
           </Switch>
         </Router>
