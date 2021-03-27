@@ -24,7 +24,6 @@
   height: 115px;
   position: absolute;
   top: 0%;
-
   left: 50%;
   transform: translate(-50%, -0%);
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
@@ -41,4 +40,44 @@
   padding: 5px;
   width: 100px;
   height: 100px;
+}
+
+.centerBtn {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+.placeLink {
+  position: absolute;
+  width: 160px;
+  height: 60px;
+  bottom: 10%;
+  left: 15px;
+  background-color: #ffffffd4;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  -webkit-box-shadow: 5px 5px 15px 5px #ffffff8c;
+  box-shadow: 5px 5px 15px 5px #ffffff8c;
+}
+
+.booking {
+  position: absolute;
+  width: 160px;
+  height: 60px;
+  bottom: 10%;
+  left: 200px;
+  background-color: #ffffffd4;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  text-align: center;
+
+  -webkit-box-shadow: 5px 5px 15px 5px #ffffff8c;
+  box-shadow: 5px 5px 15px 5px #ffffff8c;
 }
