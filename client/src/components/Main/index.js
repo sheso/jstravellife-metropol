@@ -6,17 +6,10 @@ const Main = () => {
   return (
     <>
       <div className={style.conteiner}>
-      <div className={style.imgBox}>
-         <img
-          src={logo}
-          alt=""
-         
-          className={style.image}
-        />
-      </div>
-         
-        
-        
+        <div className={style.imgBox}>
+          <img src={logo} alt="" className={style.image} />
+        </div>
+
         <div className={style.navBottom}>
           <BottomNav />
         </div>
