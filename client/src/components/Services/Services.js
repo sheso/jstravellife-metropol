@@ -7,15 +7,12 @@ import style from "./style.module.css";
 const Services = () => {
   // const dispatch = useDispatch();
   // const avia = useSelector(state => state.avia);
-  return (
-    <div className={style.services_div_wrapper}>
-      <ServiceItem service={services.hall} />
-      <ServiceItem service={services.wedding} />
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
-    </div>
-  );
-};
+  return (<div className={style.services_div_wrapper}>
+    <ServiceItem service={services.hall} />
+    <ServiceItem service={services.wedding} />
+    <ServiceItem service={services.catering} />
+    <ServiceItem service={services.hall} />
+  </div>);
+}
 
 export default Services;
