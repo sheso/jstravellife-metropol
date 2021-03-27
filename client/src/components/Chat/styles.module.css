@@ -1,0 +1,40 @@
+.chat {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 90vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.chat__action {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.chat__massege {
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.chat__send_btn {
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  height: 100%;
+  background-color: aqua;
+  box-sizing: border-box;
+}
+
+.chat__view {
+  margin: 50px 0 0 0;
+}
