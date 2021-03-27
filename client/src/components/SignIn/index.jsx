@@ -1,62 +1,31 @@
-import { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useState } from "react";
 import { useDispatch } from 'react-redux';
-import { LoadStatusElbrus, LoadStatusAdmin } from '../../Redux/actions/notes'
+import { loginUser } from "../../redux/actions/userAction";
+import { Button, FormControl, Input, InputLabel, makeStyles }from '@material-ui/core';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+}));
 
 const SignIn = () => {
 
   const dispatch = useDispatch()
 
-  const history = useHistory();
-  useEffect(() => {
-    (async () => {
-      let response = await fetch("http://localhost:3000/user/signin", {
-        method: 'GET',
-        credentials: 'include'
-      })
-      const result = await response.json()
-      if (response.status === 401) {
-        history.push(`/Home/${result}`)
-      }
-    })()
-  }, [])
-
   const [inputs, setInputs] = useState({
     email: '',
     password: '',
   });
-  const [error, setError] = useState('')
-  // const [yes, setYes] = useState(false)
 
   const handlerSubmit = async (event) => {
     event.preventDefault();
-    const response = await fetch('http://localhost:3000/user/signin', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        email,
-        password
-      }),
-      credentials: 'include'
-    });
-    if (response.status === 200) {
-      const result = await response.json()
-      if (result.admin !== true) {
-        dispatch(LoadStatusElbrus(true))
-        history.push(`/Home/${result.id}`)
-      } else {
-        dispatch(LoadStatusAdmin(true))
-        history.push(`/Home/${result.id}`)
-      }
-    } else {
-      setError('!! Неправильный логин или пароль !!')
-    }
+    dispatch(loginUser(email, password));
   }
 
-  function handlerChange({ target: { name, value } }) {
+  function handleChange({ target: { name, value } }) {
     setInputs({
       ...inputs, [name]: value,
     })
@@ -64,29 +33,22 @@ const SignIn = () => {
 
   const { email, password } = inputs;
 
+  const classes = useStyles();
+
+
   return (
-    <>
 
-      <form onSubmit={handlerSubmit}>
-        <div className="mb-3">
-          <input onChange={handlerChange} type="email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail*" required />
-        </div>
-        <div className="mb-3">
-          <input onChange={handlerChange} type="password" name="password" id="exampleInputPassword1" placeholder="Пароль*" required />
-        </div>
-        <div className="req"><span>*</span>Поля обязательные для заполнения</div>
-        <div className="error">{error}</div>
-        <div className="submBut">
-          <button type="submit" className="yellowPulseButton">Войти</button>
-        </div>
+<form onSubmit={handlerSubmit} className={classes.root} noValidate autoComplete="off">
+        <FormControl>
+        <InputLabel htmlFor="component-simple">Email</InputLabel>
+        <Input id="component-simple" type="email" value={email} onChange={handleChange} />
+        </FormControl>
+        <FormControl>
+        <InputLabel htmlFor="component-simple">Password</InputLabel>
+        <Input id="component-simple" type="password" value={password} onChange={handleChange} />
+        <Button variant="contained" color="secondary">Зарегистрироваться</Button>
+      </FormControl>
       </form>
-      <div className="reqBLue">Ещё не зарегистрированы?</div>
-
-
-
-
-    </>
-
   );
 }
 
