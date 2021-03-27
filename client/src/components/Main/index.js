@@ -8,6 +8,12 @@ const Main = () => {
         <div className={style.imgBox}>
           <img src={logo} alt="" className={style.image} />
         </div>
+        <div className={style.placeLink}>
+          <h5>ЧТО ПОСМОТРЕТЬ?</h5>
+        </div>
+        <div className={style.booking}>
+          <h5>ЗАБРОНИРОВАТЬ</h5>
+        </div>
       </div>
     </>
   );
