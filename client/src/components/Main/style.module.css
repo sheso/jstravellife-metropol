@@ -42,6 +42,11 @@
   height: 100px;
 }
 
+.centerBtn {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
 .placeLink {
   position: absolute;
   width: 160px;
@@ -55,7 +60,6 @@
   font-weight: bolder;
   color: rgb(0, 0, 0);
   text-align: center;
-
   -webkit-box-shadow: 5px 5px 15px 5px #ffffff8c;
   box-shadow: 5px 5px 15px 5px #ffffff8c;
 }
