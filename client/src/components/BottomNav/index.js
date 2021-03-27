@@ -12,8 +12,10 @@ import ChatIcon from "@material-ui/icons/Chat";
 
 const useStyles = makeStyles({
   root: {
-    width: 500,
+    width: "100vw",
     backgroundColor: "#b99f5e",
+    display: "flex",
+    justifyContent: "space-around",
   },
 });
 
@@ -29,11 +31,14 @@ export default function BottomNav() {
       }}
       showLabels
       className={classes.root}
-      style={{ maxWidth: "375px" }}
+      style={{ maxWidth: "100vw" }}
     >
       <Link to="/">
         <BottomNavigationAction
-          style={{ color: "black", borderRight: "0.5px #00000038 solid" }}
+          style={{
+            color: "black",
+            borderRight: "0.5px #00000038 solid",
+          }}
           label="Home"
           icon={<HomeIcon />}
         />
