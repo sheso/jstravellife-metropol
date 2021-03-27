@@ -43,16 +43,20 @@
 }
 
 .centerBtn {
+  position: absolute;
+  top: 83%;
+  left: 0%;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  align-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: space-around;
+  align-items: center;
 }
 .placeLink {
-  position: absolute;
-  width: 160px;
+  width: 45%;
   height: 60px;
-  bottom: 10%;
-  left: 15px;
+
   background-color: #ffffffd4;
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
@@ -65,11 +69,10 @@
 }
 
 .booking {
-  position: absolute;
-  width: 160px;
+  width: 45%;
+
   height: 60px;
-  bottom: 10%;
-  left: 200px;
+
   background-color: #ffffffd4;
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
@@ -77,7 +80,6 @@
   font-weight: bolder;
   color: rgb(0, 0, 0);
   text-align: center;
-
   -webkit-box-shadow: 5px 5px 15px 5px #ffffff8c;
   box-shadow: 5px 5px 15px 5px #ffffff8c;
 }
