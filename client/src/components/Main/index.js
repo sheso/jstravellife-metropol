@@ -13,22 +13,21 @@ const Main = () => {
         </div>
         <div className={style.centerBtn}>
           <div className={style.placeLink}>
-          <h5>
-            {statusLang.translate
-              ? statusLang.en.button[0]
-              : statusLang.ru.button[0]}
-          </h5>
+            <h5>
+              {statusLang.translate
+                ? statusLang.en.button[0]
+                : statusLang.ru.button[0]}
+            </h5>
+          </div>
+          <div className={style.booking}>
+            <h5>
+              {" "}
+              {statusLang.translate
+                ? statusLang.en.button[1]
+                : statusLang.ru.button[1]}
+            </h5>
+          </div>
         </div>
-        <div className={style.booking}>
-          <h5>
-            {" "}
-            {statusLang.translate
-              ? statusLang.en.button[1]
-              : statusLang.ru.button[1]}
-          </h5>
-        </div>
-        </div>
-        
       </div>
     </>
   );
