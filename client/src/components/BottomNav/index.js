@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 
-import { Link } from "react-router-dom";
+import Link from "@material-ui/core/Link";
 
 import HomeIcon from "@material-ui/icons/Home";
 import AccountBoxIcon from "@material-ui/icons/AccountBox";
@@ -12,8 +12,11 @@ import ChatIcon from "@material-ui/icons/Chat";
 
 const useStyles = makeStyles({
   root: {
-    width: 500,
+    width: "100vw",
     backgroundColor: "#b99f5e",
+    display: "flex",
+    justifyContent: "space-around",
+    
   },
 });
 
@@ -29,30 +32,37 @@ export default function BottomNav() {
       }}
       showLabels
       className={classes.root}
-      style={{ maxWidth: "375px" }}
+      style={{ maxWidth: "100vw" }}
     >
-      <Link to="/">
+      <Link href="/">
         <BottomNavigationAction
-          style={{ color: "black", borderRight: "0.5px #00000038 solid" }}
+          style={{
+            color: "black",
+            borderRight: "0.5px #00000038 solid",
+          }}
           label="Home"
           icon={<HomeIcon />}
         />
       </Link>
-      <Link to="/services">
+      <Link href="/services">
         <BottomNavigationAction
           style={{ color: "black", borderRight: "0.5px #00000038 solid" }}
           label="Services"
           icon={<SpaIcon />}
         />
       </Link>
-      <Link to="/chat">
+      <Link href="/chat">
         <BottomNavigationAction
           style={{ color: "black", borderRight: "0.5px #00000038 solid" }}
           label="Chat"
           icon={<ChatIcon />}
         />
       </Link>
-      <Link to="/profile">
+      <Link
+        href="/profile"
+        label="Profile"
+        style={{ textDecoration: "none", color: "black" }}
+      >
         <BottomNavigationAction
           style={{ color: "black" }}
           label="Profile"

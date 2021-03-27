@@ -1,20 +1,13 @@
 const initState = {
   ru: {
-    header: [
-      'Начало', "Обо мне", "Услуги", "Технологии", "Контакты"
-    ]
+    button: ["ЧТО ПОСМОТРЕТЬ", "ЗАБРОНИРОВАТЬ"],
   },
 
   en: {
-    header: [
-      "Home", "About", "Servises", "Skills", "Contact"
-    ]
-
+    button: ["ATTRACTIONS", "BOOKING"],
   },
   translate: true,
   user: null,
-}
+};
 
-export default initState
-
-
+export default initState;
