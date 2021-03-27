@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -41,14 +42,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RecipeReviewCard({service}) {
+export default function RecipeReviewCard({ service }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
- 
+
 
   return (
     <Card className={classes.root}>
@@ -78,10 +79,14 @@ export default function RecipeReviewCard({service}) {
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-          <AddBoxIcon />
+          <Link to='/'>
+            <AddBoxIcon />
+          </Link>
         </IconButton>
         <IconButton aria-label="share">
-          <ChatIcon />
+          <Link to='/'>
+            <ChatIcon />
+          </Link>
         </IconButton>
         <IconButton
           className={clsx(classes.expand, {

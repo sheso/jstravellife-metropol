@@ -6,15 +6,13 @@ import style from "./style.module.css";
 
 
 const Services = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // const avia = useSelector(state => state.avia);
   return (<div className={style.services_div_wrapper}>
     <ServiceItem service={services.hall} />
     <ServiceItem service={services.wedding} />
     <ServiceItem service={services.catering} />
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button>
+    <ServiceItem service={services.hall} />
   </div>);
 }
 
