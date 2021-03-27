@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5c70b82f.chunk.css",
+    "main.js": "/static/js/main.8bd2e97c.chunk.js",
+    "main.js.map": "/static/js/main.8bd2e97c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ac6e64e4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ac6e64e4.js.map",
+    "static/js/2.78410817.chunk.js": "/static/js/2.78410817.chunk.js",
+    "static/js/2.78410817.chunk.js.map": "/static/js/2.78410817.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.5c70b82f.chunk.css.map": "/static/css/main.5c70b82f.chunk.css.map",
+    "static/js/2.78410817.chunk.js.LICENSE.txt": "/static/js/2.78410817.chunk.js.LICENSE.txt",
+    "static/media/logo.42d5ef65.png": "/static/media/logo.42d5ef65.png",
+    "static/media/style.module.css": "/static/media/Фасад здания.bc8bb833.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ac6e64e4.js",
+    "static/js/2.78410817.chunk.js",
+    "static/css/main.5c70b82f.chunk.css",
+    "static/js/main.8bd2e97c.chunk.js"
+  ]
+}
