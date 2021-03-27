@@ -10,11 +10,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     transform: "translateZ(0px)",
     flexGrow: 1,
+    background: "none",
   },
   exampleWrapper: {
     // position: 'relative',
     position: "absolute",
-    marginTop: theme.spacing(-2),
+    marginTop: theme.spacing(-3),
     height: 50,
   },
   speedDial: {
@@ -62,9 +63,10 @@ export default function SpeedDials() {
       style={{
         width: 40,
         height: 40,
-        marginTop: 0,
+        marginTop: 20,
         zIndex: 1,
         position: "absolute",
+        right: "0px",
       }}
     >
       <div
@@ -72,7 +74,7 @@ export default function SpeedDials() {
         style={{
           position: "fixed",
           top: "50%",
-          left: "300px",
+          right: "0px",
           width: "50px",
           height: "50px",
         }}
@@ -85,7 +87,7 @@ export default function SpeedDials() {
           onClose={handleClose}
           onOpen={handleOpen}
           open={open}
-          direction="down"
+          direction="left"
         >
           <SpeedDialAction
             key={storeLang ? actions[1].name : actions[0].name}
