@@ -7,7 +7,13 @@ const initState = {
     button: ["ATTRACTIONS", "BOOKING"],
   },
   translate: true,
-  user: null,
+  user: {
+    _id: '',
+    userName: "Vasiliy",
+    nickName: 'Vas',
+    email: 'vas@ya.ru',
+    password: '123',
+    sessionId: '1221',},
 };
 
 export default initState;

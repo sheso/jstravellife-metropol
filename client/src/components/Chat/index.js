@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './styles.module.css';
+import TelegramIcon from '@material-ui/icons/Telegram';
+import TextField from '@material-ui/core/TextField';
 
 const Chat = () => {
   const userId = '605f21e07e4b253e53fcd4bb';
@@ -36,29 +38,33 @@ const Chat = () => {
   }, []);
 
   return (
-    <div className={styles.chat}>
-      <div className={styles.chat__view}>
-        {chat.messages &&
+    <div>
+    <h3>Мы всегда рады вам помочь</h3>
+    <hr></hr>
+      <div className={styles.chat}>
+        <div className={styles.chat__view}>
+          <div className={styles.chat__view__mes_from_client}>Привет</div>
+          <div className={styles.chat__view__mes_from_admin}>Здравствуйте </div>
+          {/* {chat.messages &&
           chat.messages.map((el) => {
-            return <div className={styles.chat__view__mes}>{el.message}</div>;
-          })}
+            return <div className={styles.chat__view__mes_from_client}>{el.message}</div>;
+          })} */}
+        </div>
       </div>
+      <div className='wraperForm'>
       <form
-        className={styles.chat__action}
+        className={styles.chat__action_form}
         onSubmit={(e) => {
           sendMessage(e);
         }}
       >
-        <input
-          className={styles.chat__massege}
-          type="text"
-          value={newMassege}
+        <TextField className={styles.chat__message} value={newMassege}
           onChange={(e) => {
             setnewMassege(e.target.value);
-          }}
-        />
-        <button className={styles.chat__send_btn}> send </button>
+          }} id="outlined-basic" label="Text here" variant="outlined" />
+        <button className={styles.chat__send_btn}> <TelegramIcon /> </button>
       </form>
+      </div>
     </div>
   );
 };
