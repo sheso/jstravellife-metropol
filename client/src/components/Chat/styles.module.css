@@ -1,47 +1,118 @@
 .chat {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 90vh;
+  /* margin: 0;
   overflow-x: hidden;
   overflow-y: scroll;
+  background-image: url("http://www.hsr.ru/images/metropol/mcith/00_290_290.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 75vh;
+  gap: 10px;
 }
 
-.chat__action {
-  margin: 0;
+.chat__action_form {
+  /* margin: 0 10px;
   padding: 0;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  bottom: 65px;
   left: 0;
   right: 0;
   height: 50px;
   box-sizing: border-box;
+  gap: 5px; */
+  position: fixed;
+  bottom: 65px;
+  
 }
-
-.chat__massege {
-  margin: 0;
-  padding: 0;
-  width: 90%;
-  height: 100%;
-  box-sizing: border-box;
+.chat__action_form::before {
+  content: '';
+  width: 100vw;
+  background-color: black;
+  opacity: 0.1;
+  position: absolute;
+  height: 20vh;
+}
+.chat__message {
+  width: 75vw;
 }
 
 .chat__send_btn {
-  margin: 0;
+  /* margin: 0;
   padding: 0;
   width: 10%;
   height: 100%;
-  background-color: aqua;
+  background-color: #3f51b5;
   box-sizing: border-box;
+   */
+   border-radius: 5px;
+  width: 15vw;
+  height: 55px;
+  margin: 0 8px;
+  
 }
 
 .chat__view {
-  margin: 50px 0 0 0;
+  /* margin: 50px 0 0 0; */
+  display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-height: 70vh;
 }
 
 .chat__view__mes {
-  margin: 0 auto;
+  /* margin: 5px auto;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  background-color: aliceblue;
   padding: 0;
   width: 90%;
-  height: 70px;
+  border: solid 1px grey;
+  border-radius: 10px; */
+    
+}
+
+.chat__view__mes_from_client {
+  padding: 10px 20px;
+  margin: 10px 80px 10px 5px;
+  border-radius: 5px;
+  background-color: rgb(224, 224, 157);
+  font-size: x-large;
+  text-align: right;
+  width: 75%;
+  word-break:break-all;
+}
+.chat__view__mes_from_admin {
+  text-align: center;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #b0b6d6;
+  font-size: x-large;
+  width: 75%;
+  word-break:break-all;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* стили для sm-устройств */
+  .chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 50vh;
+  gap: 10px;
+  word-break:break-all;
+  }
 }
