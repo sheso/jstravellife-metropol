@@ -70,9 +70,7 @@
 
 .booking {
   width: 45%;
-
   height: 60px;
-
   background-color: #ffffffd4;
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
@@ -82,4 +80,11 @@
   text-align: center;
   -webkit-box-shadow: 5px 5px 15px 5px #ffffff8c;
   box-shadow: 5px 5px 15px 5px #ffffff8c;
+}
+
+.linkBooking {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  top: 35%;
 }
