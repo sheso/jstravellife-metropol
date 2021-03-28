@@ -18,6 +18,7 @@ function App() {
         <Router>
           {/* <Header /> */}
           <Switch>
+           
             <Route path="/signin">
               <SignIn />
             </Route>
