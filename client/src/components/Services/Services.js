@@ -20,8 +20,11 @@ const Services = () => {
           statusLang.translate ? statusLang.en.wedding : statusLang.ru.wedding
         }
       />
-      <ServiceItem service={ statusLang.translate ? statusLang.en.catering : statusLang.ru.catering} />
-      <ServiceItem service={services.hall} />
+      <ServiceItem
+        service={
+          statusLang.translate ? statusLang.en.catering : statusLang.ru.catering
+        }
+      />
     </div>
   );
 };
